@@ -13,7 +13,76 @@
   --font-title: "Montserrat", sans-serif;
   --font-text: "Lato", sans-serif;
 }
+  #butt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 0 0 -2px;
+	margin: auto;
+	width: 300px;
+  height:74px;
+	cursor: pointer;
+	outline: none;
+	border: 0;
+	text-transform: inherit;
+	font-size: inherit;
+	font-family: inherit;
+  }
+  .styling-a{
+    font-weight: 600;
+		color: #382b22;
+		
+		background: #81b64c;
+		border: 2px solid #45753c;
+		border-radius: 0.75em;
+		transform-style: preserve-3d;
+		transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+  }
   
+
+	.styling-a::before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #81b64c;
+		border-radius: inherit;
+		box-shadow: 0 0 0 2px #81b64c, 0 0.45em 0 0 #45753c;
+		transform: translate3d(0, 0.75em, -1em);
+		transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+	}
+
+	.styling-a:hover {
+		background: #81b64c;
+		transform: translate(0, 0.25em);
+    
+	}
+
+.styling-a:hover::before {
+		box-shadow: 0 0 0 2px #81b64c, 0 0.5em 0 0 #45753c;
+		transform: translate3d(0, 0.5em, -1em);
+	}
+
+	.styling-a:active {
+		background: #81b64c;
+		transform: translate(0em, 0.75em);
+	}
+
+.styling-a:active::before {
+		box-shadow: 0 0 0 2px #81b64c, 0 0 #66965c;
+		transform: translate3d(0, 0, -1em);
+
+	}
+  .testr{
+   
+    color:rgb(239, 239, 239);
+    font-weight: 1000;
+    display:inline-flex;
+  }
   .animate-on-scroll {
 	opacity: 0;
 	transform: translate(-300px, 0);
@@ -291,7 +360,9 @@ color:white
     transition: var(--transition-speed);
     margin:150px auto;
     
-
+  .dark .com{
+  fill:wheat;
+  }
   }
   .One:hover{
     transform:scale(1.1);
@@ -446,6 +517,17 @@ color:var(--text-primary);
     .CARDSW{
       display:block;
     }
+    #butt{
+      height:90px;
+      width:210px;
+    }
+    .buttond{
+     position:relative;
+     left:-39px;
+    }
+    .testr{
+      font-size:40px;
+    }
     .photo2{
         right: 13px;
        
@@ -490,7 +572,7 @@ color:var(--text-primary);
         margin: 12px 0;
       }
       .buttons{
-        margin-left:70px;
+        margin-left:80px;
       }
       #services{
         opacity:1;
@@ -866,6 +948,11 @@ input[type="checkbox"]:checked {
 
 
 .button{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttond{
   display:flex;
   align-items: center;
   justify-content: center;
